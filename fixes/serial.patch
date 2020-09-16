@@ -1,0 +1,11 @@
+--- serial.py	2020-09-16 13:27:54.358925663 -0400
++++ /usr/local/lib/python2.7/dist-packages/luma.core-1.12.0-py2.7.egg/luma/core/interface/serial.py	2020-09-16 13:27:16.119104294 -0400
+@@ -278,7 +278,7 @@
+         try:
+             self._spi = spi or self.__spidev__()
+             self._spi.open(port, device)
+-            self._spi.cshigh = cs_high
++#            self._spi.cshigh = cs_high
+         except (IOError, OSError) as e:
+             if e.errno == errno.ENOENT:
+                 raise luma.core.error.DeviceNotFoundError('SPI device not found')
