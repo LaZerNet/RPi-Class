@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Library required for LCD Address: 0x21
-pip install Adafruit_BBIO
+sudo pip3 install Adafruit_BBIO
 
 # Patch required for DHT11 (Add RPi 4 support to adafruit library)
 sudo patch -d/ -p0 << EOF
